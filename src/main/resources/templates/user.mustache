@@ -1,0 +1,33 @@
+{{> header}}
+
+<h1>StackOverflow users from Moldova and Romania</h1>
+{{#errors}}
+<p class="errors" style="color: red">{{.}}</p>
+{{/errors}}
+<div class="starter-template">
+    <table style="width:100%">
+        <tr>
+            <th>#</th>
+            <th>User Name</th>
+            <th>Location</th>
+            <th>Tags</th>
+            <th>Total Answers</th>
+            <th>Total Questions</th>
+            <th>Link to profile</th>
+            <th>Link to profile image</th>
+        </tr>
+        {{#users}}
+        <tr>
+            <td></td>
+            <td>{{name}}</td>
+            <td>{{location}}</td>
+            <td></td>
+            <td>{{answerCounter}}</td>
+            <td>{{questionCounter}}</td>
+            <td><a href="{{profileLink}}" >View Profile</a></td>
+            <td><a href="{{avatarLink}}" >View Profile Image</a> </td>
+        </tr>
+        {{/users}}
+    </table>
+</div>
+{{> footer}}
